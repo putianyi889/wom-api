@@ -1,0 +1,2928 @@
+{
+  "version": 1036,
+  "source_sha256": "c0775a0a46463a382354e9bd2ba93e095864ade6c6aeb746b968db208ff30463",
+  "collected_at": "2026-10-13T08:32:04.738066+00:00",
+  "scope": "Public reads; JSON type schemas only, no original values or credentials",
+  "apis": {
+    "FetchUserStatTableWS": {
+      "samples": 3,
+      "request": {
+        "type": "object",
+        "properties": {
+          "url": {
+            "type": "string"
+          },
+          "dataType": {
+            "type": "integer"
+          },
+          "limit": {
+            "type": "integer"
+          },
+          "offset": {
+            "type": "integer"
+          },
+          "params": {
+            "type": "object",
+            "properties": {
+              "userId": {
+                "type": "integer"
+              },
+              "season": {
+                "type": "integer"
+              },
+              "country": {
+                "type": "string"
+              },
+              "sortBy": {
+                "type": "string"
+              },
+              "brLevel": {
+                "type": "integer"
+              }
+            }
+          }
+        }
+      },
+      "response": {
+        "type": "object",
+        "properties": {
+          "url": {
+            "type": "string"
+          },
+          "count": {
+            "type": "integer"
+          },
+          "position": {
+            "type": "null"
+          },
+          "rows": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "xid": {
+                  "type": "integer"
+                },
+                "id": {
+                  "type": "integer"
+                },
+                "gameId": {
+                  "type": "integer"
+                },
+                "userId": {
+                  "type": "integer"
+                },
+                "finishedAt": {
+                  "type": "string"
+                },
+                "level": {
+                  "type": "integer"
+                },
+                "sizeX": {
+                  "type": "integer"
+                },
+                "sizeY": {
+                  "type": "integer"
+                },
+                "mines": {
+                  "type": "integer"
+                },
+                "duration": {
+                  "type": "integer"
+                },
+                "nf": {
+                  "type": "integer"
+                },
+                "bbbv": {
+                  "type": "integer"
+                },
+                "bbbvs": {
+                  "type": "integer"
+                },
+                "eff100": {
+                  "type": "integer"
+                },
+                "season": {
+                  "type": "integer"
+                },
+                "nfOnly": {
+                  "type": "integer"
+                },
+                "sortBy3bvs": {
+                  "type": "integer"
+                },
+                "mobile": {
+                  "type": "integer"
+                }
+              }
+            }
+          },
+          "initData": {
+            "type": "object",
+            "properties": {
+              "userData": {
+                "type": "object",
+                "properties": {
+                  "11711708": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "integer"
+                      },
+                      "username": {
+                        "type": "string"
+                      },
+                      "country": {
+                        "type": "string"
+                      },
+                      "online": {
+                        "type": "boolean"
+                      },
+                      "fromMobile": {
+                        "type": "boolean"
+                      }
+                    }
+                  },
+                  "35024994": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "integer"
+                      },
+                      "username": {
+                        "type": "string"
+                      },
+                      "country": {
+                        "type": "string"
+                      },
+                      "online": {
+                        "type": "boolean"
+                      },
+                      "fromMobile": {
+                        "type": "boolean"
+                      }
+                    }
+                  },
+                  "48108978": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "integer"
+                      },
+                      "username": {
+                        "type": "string"
+                      },
+                      "country": {
+                        "type": "string"
+                      },
+                      "online": {
+                        "type": "boolean"
+                      },
+                      "fromMobile": {
+                        "type": "boolean"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "GetRanksTableWS": {
+      "samples": 1,
+      "request": {
+        "type": "null"
+      },
+      "response": {
+        "type": "object",
+        "properties": {
+          "ranksCount": {
+            "type": "object",
+            "properties": {
+              "count100": {
+                "type": "integer"
+              },
+              "count200": {
+                "type": "integer"
+              },
+              "count300": {
+                "type": "integer"
+              },
+              "count400": {
+                "type": "integer"
+              },
+              "count500": {
+                "type": "integer"
+              },
+              "count600": {
+                "type": "integer"
+              },
+              "count700": {
+                "type": "integer"
+              },
+              "count800": {
+                "type": "integer"
+              },
+              "count900": {
+                "type": "integer"
+              },
+              "count1000": {
+                "type": "integer"
+              },
+              "count1100": {
+                "type": "integer"
+              },
+              "count1200": {
+                "type": "integer"
+              },
+              "count1": {
+                "type": "integer"
+              }
+            }
+          }
+        }
+      }
+    },
+    "GetUserDetailDataWS": {
+      "samples": 1,
+      "request": {
+        "type": "object",
+        "properties": {
+          "userId": {
+            "type": "integer"
+          },
+          "popupRandId": {
+            "type": "null"
+          }
+        }
+      },
+      "response": {
+        "type": "object",
+        "properties": {
+          "popupRandId": {
+            "type": "null"
+          },
+          "user": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "integer"
+              },
+              "username": {
+                "type": "string"
+              },
+              "country": {
+                "type": "string"
+              },
+              "info": {
+                "type": "string"
+              },
+              "deletedBy": {
+                "type": "null"
+              },
+              "eliteAt": {
+                "type": "string"
+              },
+              "online": {
+                "type": "boolean"
+              },
+              "fromMobile": {
+                "type": "boolean"
+              }
+            }
+          },
+          "userStat": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "integer"
+              },
+              "userId": {
+                "type": "integer"
+              },
+              "season": {
+                "type": "integer"
+              },
+              "username": {
+                "type": "string"
+              },
+              "country": {
+                "type": "string"
+              },
+              "score": {
+                "type": "integer"
+              },
+              "exp": {
+                "type": "integer"
+              },
+              "coins": {
+                "type": "integer"
+              },
+              "items": {
+                "type": "object",
+                "properties": {
+                  "2": {
+                    "type": "integer"
+                  },
+                  "3": {
+                    "type": "integer"
+                  },
+                  "4": {
+                    "type": "integer"
+                  },
+                  "5": {
+                    "type": "integer"
+                  },
+                  "6": {
+                    "type": "integer"
+                  },
+                  "7": {
+                    "type": "integer"
+                  },
+                  "8": {
+                    "type": "integer"
+                  },
+                  "9": {
+                    "type": "integer"
+                  },
+                  "10": {
+                    "type": "integer"
+                  },
+                  "15": {
+                    "type": "integer"
+                  },
+                  "16": {
+                    "type": "integer"
+                  },
+                  "17": {
+                    "type": "integer"
+                  },
+                  "18": {
+                    "type": "integer"
+                  },
+                  "30": {
+                    "type": "integer"
+                  },
+                  "31": {
+                    "type": "integer"
+                  },
+                  "32": {
+                    "type": "integer"
+                  },
+                  "33": {
+                    "type": "integer"
+                  },
+                  "43": {
+                    "type": "integer"
+                  },
+                  "45": {
+                    "type": "integer"
+                  },
+                  "46": {
+                    "type": "integer"
+                  },
+                  "51": {
+                    "type": "integer"
+                  },
+                  "63": {
+                    "type": "integer"
+                  },
+                  "64": {
+                    "type": "integer"
+                  },
+                  "65": {
+                    "type": "integer"
+                  },
+                  "66": {
+                    "type": "integer"
+                  },
+                  "67": {
+                    "type": "integer"
+                  },
+                  "114": {
+                    "type": "integer"
+                  },
+                  "118": {
+                    "type": "integer"
+                  },
+                  "128": {
+                    "type": "integer"
+                  },
+                  "138": {
+                    "type": "integer"
+                  },
+                  "157": {
+                    "type": "integer"
+                  },
+                  "161": {
+                    "type": "integer"
+                  },
+                  "168": {
+                    "type": "integer"
+                  },
+                  "174": {
+                    "type": "integer"
+                  },
+                  "178": {
+                    "type": "integer"
+                  },
+                  "182": {
+                    "type": "integer"
+                  },
+                  "188": {
+                    "type": "integer"
+                  },
+                  "191": {
+                    "type": "integer"
+                  },
+                  "192": {
+                    "type": "integer"
+                  },
+                  "316": {
+                    "type": "integer"
+                  },
+                  "358": {
+                    "type": "integer"
+                  },
+                  "359": {
+                    "type": "integer"
+                  },
+                  "361": {
+                    "type": "integer"
+                  },
+                  "362": {
+                    "type": "integer"
+                  },
+                  "365": {
+                    "type": "integer"
+                  },
+                  "370": {
+                    "type": "integer"
+                  },
+                  "371": {
+                    "type": "integer"
+                  },
+                  "372": {
+                    "type": "integer"
+                  },
+                  "373": {
+                    "type": "integer"
+                  },
+                  "374": {
+                    "type": "integer"
+                  },
+                  "375": {
+                    "type": "integer"
+                  },
+                  "376": {
+                    "type": "integer"
+                  },
+                  "377": {
+                    "type": "integer"
+                  },
+                  "378": {
+                    "type": "integer"
+                  },
+                  "379": {
+                    "type": "integer"
+                  },
+                  "380": {
+                    "type": "integer"
+                  },
+                  "381": {
+                    "type": "integer"
+                  },
+                  "391": {
+                    "type": "integer"
+                  },
+                  "392": {
+                    "type": "integer"
+                  },
+                  "394": {
+                    "type": "integer"
+                  },
+                  "395": {
+                    "type": "integer"
+                  },
+                  "396": {
+                    "type": "integer"
+                  },
+                  "403": {
+                    "type": "integer"
+                  },
+                  "404": {
+                    "type": "integer"
+                  },
+                  "405": {
+                    "type": "integer"
+                  },
+                  "406": {
+                    "type": "integer"
+                  },
+                  "407": {
+                    "type": "integer"
+                  },
+                  "408": {
+                    "type": "integer"
+                  },
+                  "410": {
+                    "type": "integer"
+                  },
+                  "418": {
+                    "type": "integer"
+                  },
+                  "419": {
+                    "type": "integer"
+                  },
+                  "420": {
+                    "type": "integer"
+                  },
+                  "421": {
+                    "type": "integer"
+                  },
+                  "422": {
+                    "type": "integer"
+                  },
+                  "423": {
+                    "type": "integer"
+                  },
+                  "424": {
+                    "type": "integer"
+                  },
+                  "425": {
+                    "type": "integer"
+                  },
+                  "426": {
+                    "type": "integer"
+                  },
+                  "430": {
+                    "type": "integer"
+                  },
+                  "431": {
+                    "type": "integer"
+                  },
+                  "432": {
+                    "type": "integer"
+                  },
+                  "433": {
+                    "type": "integer"
+                  },
+                  "434": {
+                    "type": "integer"
+                  },
+                  "435": {
+                    "type": "integer"
+                  },
+                  "436": {
+                    "type": "integer"
+                  },
+                  "437": {
+                    "type": "integer"
+                  },
+                  "438": {
+                    "type": "integer"
+                  },
+                  "439": {
+                    "type": "integer"
+                  },
+                  "440": {
+                    "type": "integer"
+                  },
+                  "441": {
+                    "type": "integer"
+                  },
+                  "445": {
+                    "type": "integer"
+                  },
+                  "448": {
+                    "type": "integer"
+                  },
+                  "450": {
+                    "type": "integer"
+                  },
+                  "453": {
+                    "type": "integer"
+                  },
+                  "454": {
+                    "type": "integer"
+                  },
+                  "455": {
+                    "type": "integer"
+                  },
+                  "463": {
+                    "type": "integer"
+                  },
+                  "465": {
+                    "type": "integer"
+                  },
+                  "466": {
+                    "type": "integer"
+                  },
+                  "470": {
+                    "type": "integer"
+                  },
+                  "478": {
+                    "type": "integer"
+                  },
+                  "480": {
+                    "type": "integer"
+                  },
+                  "481": {
+                    "type": "integer"
+                  },
+                  "482": {
+                    "type": "integer"
+                  },
+                  "483": {
+                    "type": "integer"
+                  },
+                  "485": {
+                    "type": "integer"
+                  },
+                  "486": {
+                    "type": "integer"
+                  },
+                  "490": {
+                    "type": "integer"
+                  },
+                  "491": {
+                    "type": "integer"
+                  },
+                  "492": {
+                    "type": "integer"
+                  },
+                  "493": {
+                    "type": "integer"
+                  },
+                  "494": {
+                    "type": "integer"
+                  },
+                  "495": {
+                    "type": "integer"
+                  },
+                  "496": {
+                    "type": "integer"
+                  },
+                  "497": {
+                    "type": "integer"
+                  },
+                  "498": {
+                    "type": "integer"
+                  },
+                  "499": {
+                    "type": "integer"
+                  },
+                  "500": {
+                    "type": "integer"
+                  },
+                  "501": {
+                    "type": "integer"
+                  },
+                  "508": {
+                    "type": "integer"
+                  },
+                  "511": {
+                    "type": "integer"
+                  },
+                  "512": {
+                    "type": "integer"
+                  },
+                  "525": {
+                    "type": "integer"
+                  },
+                  "526": {
+                    "type": "integer"
+                  },
+                  "528": {
+                    "type": "integer"
+                  },
+                  "531": {
+                    "type": "integer"
+                  },
+                  "532": {
+                    "type": "integer"
+                  },
+                  "544": {
+                    "type": "integer"
+                  },
+                  "40841006": {
+                    "type": "integer"
+                  },
+                  "102102520": {
+                    "type": "integer"
+                  },
+                  "102102522": {
+                    "type": "integer"
+                  },
+                  "102102524": {
+                    "type": "integer"
+                  },
+                  "122523028": {
+                    "type": "integer"
+                  }
+                }
+              },
+              "eq": {
+                "type": "object",
+                "properties": {
+                  "0": {
+                    "type": "string"
+                  },
+                  "1": {
+                    "type": "string"
+                  },
+                  "2": {
+                    "type": "string"
+                  },
+                  "3": {
+                    "type": "string"
+                  },
+                  "4": {
+                    "type": "string"
+                  }
+                }
+              },
+              "quality": {
+                "type": "integer"
+              },
+              "boosts": {
+                "type": "object",
+                "properties": {
+                  "40841006": {
+                    "type": "integer"
+                  },
+                  "102102520": {
+                    "type": "integer"
+                  },
+                  "102102522": {
+                    "type": "integer"
+                  },
+                  "102102524": {
+                    "type": "integer"
+                  },
+                  "122523028": {
+                    "type": "integer"
+                  }
+                }
+              },
+              "expAll": {
+                "type": "integer"
+              },
+              "coinsAll": {
+                "type": "integer"
+              },
+              "coinsSeason": {
+                "type": "integer"
+              },
+              "gemsAll": {
+                "type": "integer"
+              },
+              "games": {
+                "type": "integer"
+              },
+              "winsAll": {
+                "type": "integer"
+              },
+              "timeAll": {
+                "type": "integer"
+              },
+              "ticketScoreAll": {
+                "type": "integer"
+              },
+              "questScoreAll": {
+                "type": "integer"
+              },
+              "activityTotal": {
+                "type": "integer"
+              },
+              "eventItems": {
+                "type": "integer"
+              },
+              "arenaCoinsAll": {
+                "type": "integer"
+              },
+              "bbbvActive": {
+                "type": "integer"
+              },
+              "bbbvAll": {
+                "type": "integer"
+              },
+              "lastSeason": {
+                "type": "integer"
+              },
+              "seasons": {
+                "type": "integer"
+              },
+              "timePoints": {
+                "type": "integer"
+              },
+              "timeId": {
+                "type": "integer"
+              },
+              "nfPoints": {
+                "type": "integer"
+              },
+              "nfId": {
+                "type": "integer"
+              },
+              "effPoints": {
+                "type": "integer"
+              },
+              "effId": {
+                "type": "integer"
+              },
+              "diff": {
+                "type": "integer"
+              },
+              "diffBbbv": {
+                "type": "integer"
+              },
+              "diffId": {
+                "type": "integer"
+              },
+              "arenaPoints": {
+                "type": "integer"
+              },
+              "arenaDuration": {
+                "type": "integer"
+              },
+              "mastery1": {
+                "type": "integer"
+              },
+              "mastery1Time": {
+                "type": "integer"
+              },
+              "mastery1Id": {
+                "type": "integer"
+              },
+              "mastery2": {
+                "type": "integer"
+              },
+              "mastery2Time": {
+                "type": "integer"
+              },
+              "mastery2Id": {
+                "type": "integer"
+              },
+              "mastery3": {
+                "type": "integer"
+              },
+              "mastery3Time": {
+                "type": "integer"
+              },
+              "mastery3Id": {
+                "type": "integer"
+              },
+              "masteryLPoints": {
+                "type": "integer"
+              },
+              "masteryLTime": {
+                "type": "integer"
+              },
+              "masteryLId": {
+                "type": "integer"
+              },
+              "masteryPoints": {
+                "type": "integer"
+              },
+              "masteryTime": {
+                "type": "integer"
+              },
+              "masteryId": {
+                "type": "integer"
+              },
+              "ws1": {
+                "type": "integer"
+              },
+              "ws1Time": {
+                "type": "integer"
+              },
+              "ws1Id": {
+                "type": "integer"
+              },
+              "ws2": {
+                "type": "integer"
+              },
+              "ws2Time": {
+                "type": "integer"
+              },
+              "ws2Id": {
+                "type": "integer"
+              },
+              "ws3": {
+                "type": "integer"
+              },
+              "ws3Time": {
+                "type": "integer"
+              },
+              "ws3Id": {
+                "type": "integer"
+              },
+              "wsLPoints": {
+                "type": "integer"
+              },
+              "wsLTime": {
+                "type": "integer"
+              },
+              "wsLId": {
+                "type": "integer"
+              },
+              "wsPoints": {
+                "type": "integer"
+              },
+              "wsTime": {
+                "type": "integer"
+              },
+              "wsId": {
+                "type": "integer"
+              },
+              "end1": {
+                "type": "integer"
+              },
+              "end1Id": {
+                "type": "integer"
+              },
+              "end2": {
+                "type": "integer"
+              },
+              "end2Id": {
+                "type": "null"
+              },
+              "end3": {
+                "type": "integer"
+              },
+              "end3Id": {
+                "type": "null"
+              },
+              "endBestPoints": {
+                "type": "integer"
+              },
+              "endBestId": {
+                "type": "integer"
+              },
+              "endNHPoints": {
+                "type": "integer"
+              },
+              "endNHId": {
+                "type": "null"
+              },
+              "wins1": {
+                "type": "integer"
+              },
+              "wins2": {
+                "type": "integer"
+              },
+              "wins3": {
+                "type": "integer"
+              },
+              "wins4": {
+                "type": "integer"
+              },
+              "wins11": {
+                "type": "integer"
+              },
+              "wins12": {
+                "type": "integer"
+              },
+              "wins13": {
+                "type": "integer"
+              },
+              "wins14": {
+                "type": "integer"
+              },
+              "wins15": {
+                "type": "integer"
+              },
+              "wins13_14": {
+                "type": "integer"
+              },
+              "winsNf": {
+                "type": "integer"
+              },
+              "rewards": {
+                "type": "array",
+                "items": {
+                  "type": "integer"
+                }
+              },
+              "rewardsAll": {
+                "type": "integer"
+              },
+              "extraStat": {
+                "type": "object",
+                "properties": {
+                  "a1": {
+                    "type": "integer"
+                  },
+                  "a2": {
+                    "type": "integer"
+                  },
+                  "a3": {
+                    "type": "integer"
+                  },
+                  "a4": {
+                    "type": "integer"
+                  },
+                  "a5": {
+                    "type": "integer"
+                  },
+                  "a6": {
+                    "type": "integer"
+                  },
+                  "a7": {
+                    "type": "integer"
+                  },
+                  "a8": {
+                    "type": "integer"
+                  },
+                  "ca": {
+                    "type": "integer"
+                  },
+                  "cg": {
+                    "type": "integer"
+                  },
+                  "cq": {
+                    "type": "integer"
+                  },
+                  "cs": {
+                    "type": "integer"
+                  },
+                  "ea": {
+                    "type": "integer"
+                  },
+                  "eg": {
+                    "type": "integer"
+                  },
+                  "eq": {
+                    "type": "integer"
+                  },
+                  "g1": {
+                    "type": "integer"
+                  },
+                  "g2": {
+                    "type": "integer"
+                  },
+                  "g3": {
+                    "type": "integer"
+                  },
+                  "g4": {
+                    "type": "integer"
+                  },
+                  "g5": {
+                    "type": "integer"
+                  },
+                  "g6": {
+                    "type": "integer"
+                  },
+                  "g7": {
+                    "type": "integer"
+                  },
+                  "g8": {
+                    "type": "integer"
+                  },
+                  "g9": {
+                    "type": "integer"
+                  },
+                  "qd": {
+                    "type": "integer"
+                  },
+                  "qe": {
+                    "type": "integer"
+                  },
+                  "qs": {
+                    "type": "integer"
+                  },
+                  "t1": {
+                    "type": "integer"
+                  },
+                  "t2": {
+                    "type": "integer"
+                  },
+                  "t3": {
+                    "type": "integer"
+                  },
+                  "t4": {
+                    "type": "integer"
+                  },
+                  "t5": {
+                    "type": "integer"
+                  },
+                  "t6": {
+                    "type": "integer"
+                  },
+                  "t7": {
+                    "type": "integer"
+                  },
+                  "t8": {
+                    "type": "integer"
+                  },
+                  "aca": {
+                    "type": "integer"
+                  },
+                  "acg": {
+                    "type": "integer"
+                  },
+                  "acq": {
+                    "type": "integer"
+                  },
+                  "eia": {
+                    "type": "integer"
+                  },
+                  "eic": {
+                    "type": "integer"
+                  },
+                  "eig": {
+                    "type": "integer"
+                  },
+                  "eiq": {
+                    "type": "integer"
+                  },
+                  "g10": {
+                    "type": "integer"
+                  },
+                  "arc2": {
+                    "type": "integer"
+                  },
+                  "arc3": {
+                    "type": "integer"
+                  },
+                  "arc4": {
+                    "type": "integer"
+                  },
+                  "arc5": {
+                    "type": "integer"
+                  },
+                  "arc6": {
+                    "type": "integer"
+                  },
+                  "arc7": {
+                    "type": "integer"
+                  },
+                  "arc8": {
+                    "type": "integer"
+                  },
+                  "arc9": {
+                    "type": "integer"
+                  },
+                  "arc10": {
+                    "type": "integer"
+                  }
+                }
+              },
+              "mmr": {
+                "type": "integer"
+              },
+              "wins50": {
+                "type": "integer"
+              },
+              "rep": {
+                "type": "integer"
+              },
+              "xmmr": {
+                "type": "integer"
+              },
+              "i5": {
+                "type": "integer"
+              },
+              "ct": {
+                "type": "null"
+              },
+              "ctData": {
+                "type": "null"
+              },
+              "j3": {
+                "type": "null"
+              },
+              "timeDuration": {
+                "type": "integer"
+              },
+              "timeLevel": {
+                "type": "integer"
+              },
+              "timeSizeX": {
+                "type": "integer"
+              },
+              "timeSizeY": {
+                "type": "integer"
+              },
+              "timeMines": {
+                "type": "integer"
+              },
+              "timeFinishedAt": {
+                "type": "string"
+              },
+              "timeBbbv": {
+                "type": "integer"
+              },
+              "timeBbbvs": {
+                "type": "integer"
+              },
+              "timeEff100": {
+                "type": "integer"
+              },
+              "timeMobile": {
+                "type": "boolean"
+              },
+              "nfDuration": {
+                "type": "integer"
+              },
+              "nfLevel": {
+                "type": "integer"
+              },
+              "nfSizeX": {
+                "type": "integer"
+              },
+              "nfSizeY": {
+                "type": "integer"
+              },
+              "nfMines": {
+                "type": "integer"
+              },
+              "nfFinishedAt": {
+                "type": "string"
+              },
+              "nfBbbv": {
+                "type": "integer"
+              },
+              "nfBbbvs": {
+                "type": "integer"
+              },
+              "nfEff100": {
+                "type": "integer"
+              },
+              "nfMobile": {
+                "type": "boolean"
+              },
+              "effDuration": {
+                "type": "integer"
+              },
+              "effLevel": {
+                "type": "integer"
+              },
+              "effSizeX": {
+                "type": "integer"
+              },
+              "effSizeY": {
+                "type": "integer"
+              },
+              "effMines": {
+                "type": "integer"
+              },
+              "effFinishedAt": {
+                "type": "string"
+              },
+              "effBbbv": {
+                "type": "integer"
+              },
+              "effBbbvs": {
+                "type": "integer"
+              },
+              "effEff100": {
+                "type": "integer"
+              },
+              "effMobile": {
+                "type": "boolean"
+              },
+              "mastery1Duration": {
+                "type": "integer"
+              },
+              "mastery1FinishedAt": {
+                "type": "string"
+              },
+              "mastery2Duration": {
+                "type": "integer"
+              },
+              "mastery2FinishedAt": {
+                "type": "string"
+              },
+              "mastery3Duration": {
+                "type": "integer"
+              },
+              "mastery3FinishedAt": {
+                "type": "string"
+              },
+              "ws1Duration": {
+                "type": "integer"
+              },
+              "ws1FinishedAt": {
+                "type": "string"
+              },
+              "ws2Duration": {
+                "type": "integer"
+              },
+              "ws2FinishedAt": {
+                "type": "string"
+              },
+              "ws3Duration": {
+                "type": "integer"
+              },
+              "ws3FinishedAt": {
+                "type": "string"
+              },
+              "diffDuration": {
+                "type": "integer"
+              },
+              "diffLevel": {
+                "type": "integer"
+              },
+              "diffSizeX": {
+                "type": "integer"
+              },
+              "diffSizeY": {
+                "type": "integer"
+              },
+              "diffMines": {
+                "type": "integer"
+              },
+              "diffFinishedAt": {
+                "type": "string"
+              },
+              "endDuration": {
+                "type": "integer"
+              },
+              "endLevel": {
+                "type": "integer"
+              },
+              "endFinishedAt": {
+                "type": "string"
+              },
+              "mastery1Points": {
+                "type": "integer"
+              },
+              "ws1Points": {
+                "type": "integer"
+              },
+              "wsLevel": {
+                "type": "integer"
+              },
+              "mastery2Points": {
+                "type": "integer"
+              },
+              "ws2Points": {
+                "type": "integer"
+              },
+              "mastery3Points": {
+                "type": "integer"
+              },
+              "ws3Points": {
+                "type": "integer"
+              },
+              "masteryLevel": {
+                "type": "integer"
+              },
+              "timeScore": {
+                "type": "integer"
+              },
+              "effScore": {
+                "type": "integer"
+              },
+              "masteryScore": {
+                "type": "integer"
+              },
+              "wsScore": {
+                "type": "integer"
+              },
+              "expScore": {
+                "type": "integer"
+              },
+              "coinsSeasonScore": {
+                "type": "integer"
+              },
+              "qualityScore": {
+                "type": "integer"
+              },
+              "arenaScore": {
+                "type": "integer"
+              },
+              "diffScore": {
+                "type": "integer"
+              },
+              "endScore": {
+                "type": "integer"
+              },
+              "winsScore": {
+                "type": "integer"
+              },
+              "rewardsScore": {
+                "type": "integer"
+              },
+              "scoreRank": {
+                "type": "integer"
+              },
+              "mmrRank": {
+                "type": "null"
+              }
+            }
+          },
+          "seasonUserStat": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "integer"
+              },
+              "userId": {
+                "type": "integer"
+              },
+              "season": {
+                "type": "integer"
+              },
+              "username": {
+                "type": "string"
+              },
+              "country": {
+                "type": "string"
+              },
+              "score": {
+                "type": "integer"
+              },
+              "exp": {
+                "type": "integer"
+              },
+              "coins": {
+                "type": "integer"
+              },
+              "items": {
+                "type": "object",
+                "properties": {
+                  "5": {
+                    "type": "integer"
+                  },
+                  "8": {
+                    "type": "integer"
+                  },
+                  "15": {
+                    "type": "integer"
+                  },
+                  "112": {
+                    "type": "integer"
+                  },
+                  "114": {
+                    "type": "integer"
+                  },
+                  "121": {
+                    "type": "integer"
+                  },
+                  "123": {
+                    "type": "integer"
+                  },
+                  "132": {
+                    "type": "integer"
+                  },
+                  "141": {
+                    "type": "integer"
+                  },
+                  "143": {
+                    "type": "integer"
+                  },
+                  "148": {
+                    "type": "integer"
+                  },
+                  "157": {
+                    "type": "integer"
+                  },
+                  "161": {
+                    "type": "integer"
+                  },
+                  "162": {
+                    "type": "integer"
+                  },
+                  "165": {
+                    "type": "integer"
+                  },
+                  "168": {
+                    "type": "integer"
+                  },
+                  "171": {
+                    "type": "integer"
+                  },
+                  "174": {
+                    "type": "integer"
+                  },
+                  "178": {
+                    "type": "integer"
+                  },
+                  "181": {
+                    "type": "integer"
+                  },
+                  "182": {
+                    "type": "integer"
+                  },
+                  "183": {
+                    "type": "integer"
+                  },
+                  "185": {
+                    "type": "integer"
+                  },
+                  "192": {
+                    "type": "integer"
+                  },
+                  "194": {
+                    "type": "integer"
+                  },
+                  "490": {
+                    "type": "integer"
+                  },
+                  "491": {
+                    "type": "integer"
+                  },
+                  "492": {
+                    "type": "integer"
+                  },
+                  "493": {
+                    "type": "integer"
+                  },
+                  "494": {
+                    "type": "integer"
+                  },
+                  "495": {
+                    "type": "integer"
+                  },
+                  "496": {
+                    "type": "integer"
+                  },
+                  "497": {
+                    "type": "integer"
+                  },
+                  "498": {
+                    "type": "integer"
+                  },
+                  "499": {
+                    "type": "integer"
+                  },
+                  "500": {
+                    "type": "integer"
+                  },
+                  "501": {
+                    "type": "integer"
+                  },
+                  "544": {
+                    "type": "integer"
+                  }
+                }
+              },
+              "eq": {
+                "type": "null"
+              },
+              "quality": {
+                "type": "integer"
+              },
+              "boosts": {
+                "type": "null"
+              },
+              "expAll": {
+                "type": "integer"
+              },
+              "coinsAll": {
+                "type": "integer"
+              },
+              "coinsSeason": {
+                "type": "integer"
+              },
+              "gemsAll": {
+                "type": "integer"
+              },
+              "games": {
+                "type": "integer"
+              },
+              "winsAll": {
+                "type": "integer"
+              },
+              "timeAll": {
+                "type": "integer"
+              },
+              "ticketScoreAll": {
+                "type": "integer"
+              },
+              "questScoreAll": {
+                "type": "integer"
+              },
+              "activityTotal": {
+                "type": "integer"
+              },
+              "eventItems": {
+                "type": "integer"
+              },
+              "arenaCoinsAll": {
+                "type": "integer"
+              },
+              "bbbvActive": {
+                "type": "integer"
+              },
+              "bbbvAll": {
+                "type": "integer"
+              },
+              "lastSeason": {
+                "type": "integer"
+              },
+              "seasons": {
+                "type": "integer"
+              },
+              "timePoints": {
+                "type": "integer"
+              },
+              "timeId": {
+                "type": "integer"
+              },
+              "nfPoints": {
+                "type": "integer"
+              },
+              "nfId": {
+                "type": "null"
+              },
+              "effPoints": {
+                "type": "integer"
+              },
+              "effId": {
+                "type": "null"
+              },
+              "diff": {
+                "type": "integer"
+              },
+              "diffBbbv": {
+                "type": "integer"
+              },
+              "diffId": {
+                "type": "integer"
+              },
+              "arenaPoints": {
+                "type": "integer"
+              },
+              "arenaDuration": {
+                "type": "null"
+              },
+              "mastery1": {
+                "type": "integer"
+              },
+              "mastery1Time": {
+                "type": "integer"
+              },
+              "mastery1Id": {
+                "type": "integer"
+              },
+              "mastery2": {
+                "type": "integer"
+              },
+              "mastery2Time": {
+                "type": "null"
+              },
+              "mastery2Id": {
+                "type": "null"
+              },
+              "mastery3": {
+                "type": "integer"
+              },
+              "mastery3Time": {
+                "type": "null"
+              },
+              "mastery3Id": {
+                "type": "null"
+              },
+              "masteryLPoints": {
+                "type": "integer"
+              },
+              "masteryLTime": {
+                "type": "integer"
+              },
+              "masteryLId": {
+                "type": "integer"
+              },
+              "masteryPoints": {
+                "type": "integer"
+              },
+              "masteryTime": {
+                "type": "integer"
+              },
+              "masteryId": {
+                "type": "integer"
+              },
+              "ws1": {
+                "type": "integer"
+              },
+              "ws1Time": {
+                "type": "integer"
+              },
+              "ws1Id": {
+                "type": "integer"
+              },
+              "ws2": {
+                "type": "integer"
+              },
+              "ws2Time": {
+                "type": "null"
+              },
+              "ws2Id": {
+                "type": "null"
+              },
+              "ws3": {
+                "type": "integer"
+              },
+              "ws3Time": {
+                "type": "null"
+              },
+              "ws3Id": {
+                "type": "null"
+              },
+              "wsLPoints": {
+                "type": "integer"
+              },
+              "wsLTime": {
+                "type": "integer"
+              },
+              "wsLId": {
+                "type": "integer"
+              },
+              "wsPoints": {
+                "type": "integer"
+              },
+              "wsTime": {
+                "type": "integer"
+              },
+              "wsId": {
+                "type": "integer"
+              },
+              "end1": {
+                "type": "integer"
+              },
+              "end1Id": {
+                "type": "null"
+              },
+              "end2": {
+                "type": "integer"
+              },
+              "end2Id": {
+                "type": "null"
+              },
+              "end3": {
+                "type": "integer"
+              },
+              "end3Id": {
+                "type": "null"
+              },
+              "endBestPoints": {
+                "type": "integer"
+              },
+              "endBestId": {
+                "type": "null"
+              },
+              "endNHPoints": {
+                "type": "integer"
+              },
+              "endNHId": {
+                "type": "null"
+              },
+              "wins1": {
+                "type": "integer"
+              },
+              "wins2": {
+                "type": "integer"
+              },
+              "wins3": {
+                "type": "integer"
+              },
+              "wins4": {
+                "type": "integer"
+              },
+              "wins11": {
+                "type": "integer"
+              },
+              "wins12": {
+                "type": "integer"
+              },
+              "wins13": {
+                "type": "integer"
+              },
+              "wins14": {
+                "type": "integer"
+              },
+              "wins15": {
+                "type": "integer"
+              },
+              "wins13_14": {
+                "type": "integer"
+              },
+              "winsNf": {
+                "type": "integer"
+              },
+              "rewards": {
+                "type": "array",
+                "items": {
+                  "type": "integer"
+                }
+              },
+              "rewardsAll": {
+                "type": "integer"
+              },
+              "extraStat": {
+                "type": "object",
+                "properties": {
+                  "cg": {
+                    "type": "integer"
+                  },
+                  "cq": {
+                    "type": "integer"
+                  },
+                  "eg": {
+                    "type": "integer"
+                  },
+                  "eq": {
+                    "type": "integer"
+                  },
+                  "g5": {
+                    "type": "integer"
+                  },
+                  "g8": {
+                    "type": "integer"
+                  },
+                  "qe": {
+                    "type": "integer"
+                  },
+                  "qs": {
+                    "type": "integer"
+                  },
+                  "t1": {
+                    "type": "integer"
+                  },
+                  "t2": {
+                    "type": "integer"
+                  },
+                  "t3": {
+                    "type": "integer"
+                  },
+                  "t4": {
+                    "type": "integer"
+                  },
+                  "t5": {
+                    "type": "integer"
+                  },
+                  "t7": {
+                    "type": "integer"
+                  },
+                  "t8": {
+                    "type": "integer"
+                  },
+                  "acg": {
+                    "type": "integer"
+                  },
+                  "eig": {
+                    "type": "integer"
+                  },
+                  "eiq": {
+                    "type": "integer"
+                  }
+                }
+              },
+              "mmr": {
+                "type": "integer"
+              },
+              "wins50": {
+                "type": "integer"
+              },
+              "rep": {
+                "type": "integer"
+              },
+              "xmmr": {
+                "type": "integer"
+              },
+              "i5": {
+                "type": "integer"
+              },
+              "ct": {
+                "type": "null"
+              },
+              "ctData": {
+                "type": "null"
+              },
+              "j3": {
+                "type": "null"
+              },
+              "timeDuration": {
+                "type": "integer"
+              },
+              "timeLevel": {
+                "type": "integer"
+              },
+              "timeSizeX": {
+                "type": "integer"
+              },
+              "timeSizeY": {
+                "type": "integer"
+              },
+              "timeMines": {
+                "type": "integer"
+              },
+              "timeFinishedAt": {
+                "type": "string"
+              },
+              "timeBbbv": {
+                "type": "integer"
+              },
+              "timeBbbvs": {
+                "type": "integer"
+              },
+              "timeEff100": {
+                "type": "integer"
+              },
+              "timeMobile": {
+                "type": "boolean"
+              },
+              "nfDuration": {
+                "type": "null"
+              },
+              "nfLevel": {
+                "type": "null"
+              },
+              "nfSizeX": {
+                "type": "null"
+              },
+              "nfSizeY": {
+                "type": "null"
+              },
+              "nfMines": {
+                "type": "null"
+              },
+              "nfFinishedAt": {
+                "type": "null"
+              },
+              "nfBbbv": {
+                "type": "null"
+              },
+              "nfBbbvs": {
+                "type": "null"
+              },
+              "nfEff100": {
+                "type": "null"
+              },
+              "nfMobile": {
+                "type": "null"
+              },
+              "effDuration": {
+                "type": "null"
+              },
+              "effLevel": {
+                "type": "null"
+              },
+              "effSizeX": {
+                "type": "null"
+              },
+              "effSizeY": {
+                "type": "null"
+              },
+              "effMines": {
+                "type": "null"
+              },
+              "effFinishedAt": {
+                "type": "null"
+              },
+              "effBbbv": {
+                "type": "null"
+              },
+              "effBbbvs": {
+                "type": "null"
+              },
+              "effEff100": {
+                "type": "null"
+              },
+              "effMobile": {
+                "type": "null"
+              },
+              "mastery1Duration": {
+                "type": "integer"
+              },
+              "mastery1FinishedAt": {
+                "type": "string"
+              },
+              "mastery2Duration": {
+                "type": "null"
+              },
+              "mastery2FinishedAt": {
+                "type": "null"
+              },
+              "mastery3Duration": {
+                "type": "null"
+              },
+              "mastery3FinishedAt": {
+                "type": "null"
+              },
+              "ws1Duration": {
+                "type": "integer"
+              },
+              "ws1FinishedAt": {
+                "type": "string"
+              },
+              "ws2Duration": {
+                "type": "null"
+              },
+              "ws2FinishedAt": {
+                "type": "null"
+              },
+              "ws3Duration": {
+                "type": "null"
+              },
+              "ws3FinishedAt": {
+                "type": "null"
+              },
+              "diffDuration": {
+                "type": "integer"
+              },
+              "diffLevel": {
+                "type": "integer"
+              },
+              "diffSizeX": {
+                "type": "integer"
+              },
+              "diffSizeY": {
+                "type": "integer"
+              },
+              "diffMines": {
+                "type": "integer"
+              },
+              "diffFinishedAt": {
+                "type": "string"
+              },
+              "endDuration": {
+                "type": "null"
+              },
+              "endLevel": {
+                "type": "null"
+              },
+              "endFinishedAt": {
+                "type": "null"
+              },
+              "mastery1Points": {
+                "type": "integer"
+              },
+              "masteryLevel": {
+                "type": "integer"
+              },
+              "wsLevel": {
+                "type": "integer"
+              },
+              "timeScore": {
+                "type": "integer"
+              },
+              "effScore": {
+                "type": "integer"
+              },
+              "masteryScore": {
+                "type": "integer"
+              },
+              "wsScore": {
+                "type": "integer"
+              },
+              "expScore": {
+                "type": "integer"
+              },
+              "coinsSeasonScore": {
+                "type": "integer"
+              },
+              "qualityScore": {
+                "type": "integer"
+              },
+              "arenaScore": {
+                "type": "integer"
+              },
+              "diffScore": {
+                "type": "integer"
+              },
+              "endScore": {
+                "type": "integer"
+              },
+              "winsScore": {
+                "type": "integer"
+              },
+              "rewardsScore": {
+                "type": "integer"
+              },
+              "scoreRank": {
+                "type": "integer"
+              },
+              "eventItemsRank": {
+                "type": "integer"
+              }
+            }
+          },
+          "tokensUsed": {
+            "type": "object",
+            "properties": {
+              "1": {
+                "type": "integer"
+              },
+              "2": {
+                "type": "integer"
+              },
+              "3": {
+                "type": "integer"
+              },
+              "4": {
+                "type": "integer"
+              },
+              "5": {
+                "type": "integer"
+              },
+              "6": {
+                "type": "integer"
+              },
+              "7": {
+                "type": "integer"
+              },
+              "8": {
+                "type": "integer"
+              }
+            }
+          },
+          "timeResults": {
+            "type": "object",
+            "properties": {
+              "1": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "integer"
+                  },
+                  "gameId": {
+                    "type": "integer"
+                  },
+                  "userId": {
+                    "type": "integer"
+                  },
+                  "finishedAt": {
+                    "type": "string"
+                  },
+                  "level": {
+                    "type": "integer"
+                  },
+                  "sizeX": {
+                    "type": "integer"
+                  },
+                  "sizeY": {
+                    "type": "integer"
+                  },
+                  "mines": {
+                    "type": "integer"
+                  },
+                  "duration": {
+                    "type": "integer"
+                  },
+                  "nf": {
+                    "type": "integer"
+                  },
+                  "bbbv": {
+                    "type": "integer"
+                  },
+                  "bbbvs": {
+                    "type": "integer"
+                  },
+                  "eff100": {
+                    "type": "integer"
+                  },
+                  "season": {
+                    "type": "integer"
+                  },
+                  "nfOnly": {
+                    "type": "integer"
+                  },
+                  "sortBy3bvs": {
+                    "type": "integer"
+                  },
+                  "mobile": {
+                    "type": "integer"
+                  }
+                }
+              },
+              "2": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "integer"
+                  },
+                  "gameId": {
+                    "type": "integer"
+                  },
+                  "userId": {
+                    "type": "integer"
+                  },
+                  "finishedAt": {
+                    "type": "string"
+                  },
+                  "level": {
+                    "type": "integer"
+                  },
+                  "sizeX": {
+                    "type": "integer"
+                  },
+                  "sizeY": {
+                    "type": "integer"
+                  },
+                  "mines": {
+                    "type": "integer"
+                  },
+                  "duration": {
+                    "type": "integer"
+                  },
+                  "nf": {
+                    "type": "integer"
+                  },
+                  "bbbv": {
+                    "type": "integer"
+                  },
+                  "bbbvs": {
+                    "type": "integer"
+                  },
+                  "eff100": {
+                    "type": "integer"
+                  },
+                  "season": {
+                    "type": "integer"
+                  },
+                  "nfOnly": {
+                    "type": "integer"
+                  },
+                  "sortBy3bvs": {
+                    "type": "integer"
+                  },
+                  "mobile": {
+                    "type": "integer"
+                  }
+                }
+              },
+              "3": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "integer"
+                  },
+                  "gameId": {
+                    "type": "integer"
+                  },
+                  "userId": {
+                    "type": "integer"
+                  },
+                  "finishedAt": {
+                    "type": "string"
+                  },
+                  "level": {
+                    "type": "integer"
+                  },
+                  "sizeX": {
+                    "type": "integer"
+                  },
+                  "sizeY": {
+                    "type": "integer"
+                  },
+                  "mines": {
+                    "type": "integer"
+                  },
+                  "duration": {
+                    "type": "integer"
+                  },
+                  "nf": {
+                    "type": "integer"
+                  },
+                  "bbbv": {
+                    "type": "integer"
+                  },
+                  "bbbvs": {
+                    "type": "integer"
+                  },
+                  "eff100": {
+                    "type": "integer"
+                  },
+                  "season": {
+                    "type": "integer"
+                  },
+                  "nfOnly": {
+                    "type": "integer"
+                  },
+                  "sortBy3bvs": {
+                    "type": "integer"
+                  },
+                  "mobile": {
+                    "type": "integer"
+                  }
+                }
+              },
+              "11": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "integer"
+                  },
+                  "gameId": {
+                    "type": "integer"
+                  },
+                  "userId": {
+                    "type": "integer"
+                  },
+                  "finishedAt": {
+                    "type": "string"
+                  },
+                  "level": {
+                    "type": "integer"
+                  },
+                  "sizeX": {
+                    "type": "integer"
+                  },
+                  "sizeY": {
+                    "type": "integer"
+                  },
+                  "mines": {
+                    "type": "integer"
+                  },
+                  "duration": {
+                    "type": "integer"
+                  },
+                  "nf": {
+                    "type": "integer"
+                  },
+                  "bbbv": {
+                    "type": "integer"
+                  },
+                  "bbbvs": {
+                    "type": "integer"
+                  },
+                  "eff100": {
+                    "type": "integer"
+                  },
+                  "season": {
+                    "type": "integer"
+                  },
+                  "nfOnly": {
+                    "type": "integer"
+                  },
+                  "sortBy3bvs": {
+                    "type": "integer"
+                  },
+                  "mobile": {
+                    "type": "integer"
+                  }
+                }
+              },
+              "12": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "integer"
+                  },
+                  "gameId": {
+                    "type": "integer"
+                  },
+                  "userId": {
+                    "type": "integer"
+                  },
+                  "finishedAt": {
+                    "type": "string"
+                  },
+                  "level": {
+                    "type": "integer"
+                  },
+                  "sizeX": {
+                    "type": "integer"
+                  },
+                  "sizeY": {
+                    "type": "integer"
+                  },
+                  "mines": {
+                    "type": "integer"
+                  },
+                  "duration": {
+                    "type": "integer"
+                  },
+                  "nf": {
+                    "type": "integer"
+                  },
+                  "bbbv": {
+                    "type": "integer"
+                  },
+                  "bbbvs": {
+                    "type": "integer"
+                  },
+                  "eff100": {
+                    "type": "integer"
+                  },
+                  "season": {
+                    "type": "integer"
+                  },
+                  "nfOnly": {
+                    "type": "integer"
+                  },
+                  "sortBy3bvs": {
+                    "type": "integer"
+                  },
+                  "mobile": {
+                    "type": "integer"
+                  }
+                }
+              },
+              "13": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "integer"
+                  },
+                  "gameId": {
+                    "type": "integer"
+                  },
+                  "userId": {
+                    "type": "integer"
+                  },
+                  "finishedAt": {
+                    "type": "string"
+                  },
+                  "level": {
+                    "type": "integer"
+                  },
+                  "sizeX": {
+                    "type": "integer"
+                  },
+                  "sizeY": {
+                    "type": "integer"
+                  },
+                  "mines": {
+                    "type": "integer"
+                  },
+                  "duration": {
+                    "type": "integer"
+                  },
+                  "nf": {
+                    "type": "integer"
+                  },
+                  "bbbv": {
+                    "type": "integer"
+                  },
+                  "bbbvs": {
+                    "type": "integer"
+                  },
+                  "eff100": {
+                    "type": "integer"
+                  },
+                  "season": {
+                    "type": "integer"
+                  },
+                  "nfOnly": {
+                    "type": "integer"
+                  },
+                  "sortBy3bvs": {
+                    "type": "integer"
+                  },
+                  "mobile": {
+                    "type": "integer"
+                  }
+                }
+              },
+              "14": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "integer"
+                  },
+                  "gameId": {
+                    "type": "integer"
+                  },
+                  "userId": {
+                    "type": "integer"
+                  },
+                  "finishedAt": {
+                    "type": "string"
+                  },
+                  "level": {
+                    "type": "integer"
+                  },
+                  "sizeX": {
+                    "type": "integer"
+                  },
+                  "sizeY": {
+                    "type": "integer"
+                  },
+                  "mines": {
+                    "type": "integer"
+                  },
+                  "duration": {
+                    "type": "integer"
+                  },
+                  "nf": {
+                    "type": "integer"
+                  },
+                  "bbbv": {
+                    "type": "integer"
+                  },
+                  "bbbvs": {
+                    "type": "integer"
+                  },
+                  "eff100": {
+                    "type": "integer"
+                  },
+                  "season": {
+                    "type": "integer"
+                  },
+                  "nfOnly": {
+                    "type": "integer"
+                  },
+                  "sortBy3bvs": {
+                    "type": "integer"
+                  },
+                  "mobile": {
+                    "type": "integer"
+                  }
+                }
+              },
+              "50": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "integer"
+                  },
+                  "gameId": {
+                    "type": "integer"
+                  },
+                  "userId": {
+                    "type": "integer"
+                  },
+                  "season": {
+                    "type": "integer"
+                  },
+                  "finishedAt": {
+                    "type": "string"
+                  },
+                  "level": {
+                    "type": "integer"
+                  },
+                  "sizeX": {
+                    "type": "integer"
+                  },
+                  "sizeY": {
+                    "type": "integer"
+                  },
+                  "mines": {
+                    "type": "integer"
+                  },
+                  "duration": {
+                    "type": "integer"
+                  },
+                  "nf": {
+                    "type": "boolean"
+                  },
+                  "bbbv": {
+                    "type": "integer"
+                  },
+                  "bbbvs": {
+                    "type": "integer"
+                  },
+                  "eff100": {
+                    "type": "integer"
+                  },
+                  "hints": {
+                    "type": "integer"
+                  },
+                  "diff": {
+                    "type": "integer"
+                  },
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "10": {
+                        "type": "integer"
+                      },
+                      "531": {
+                        "type": "integer"
+                      },
+                      "546": {
+                        "type": "integer"
+                      }
+                    }
+                  },
+                  "hasGems": {
+                    "type": "boolean"
+                  },
+                  "hasTickets": {
+                    "type": "boolean"
+                  },
+                  "isNewRecord": {
+                    "type": "boolean"
+                  },
+                  "newRankScore": {
+                    "type": "null"
+                  },
+                  "reward": {
+                    "type": "null"
+                  },
+                  "isFirstTime": {
+                    "type": "boolean"
+                  },
+                  "mobile": {
+                    "type": "integer"
+                  }
+                }
+              }
+            }
+          },
+          "effResults": {
+            "type": "object",
+            "properties": {
+              "1": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "integer"
+                  },
+                  "gameId": {
+                    "type": "integer"
+                  },
+                  "userId": {
+                    "type": "integer"
+                  },
+                  "finishedAt": {
+                    "type": "string"
+                  },
+                  "level": {
+                    "type": "integer"
+                  },
+                  "sizeX": {
+                    "type": "integer"
+                  },
+                  "sizeY": {
+                    "type": "integer"
+                  },
+                  "mines": {
+                    "type": "integer"
+                  },
+                  "duration": {
+                    "type": "integer"
+                  },
+                  "nf": {
+                    "type": "integer"
+                  },
+                  "bbbv": {
+                    "type": "integer"
+                  },
+                  "bbbvs": {
+                    "type": "integer"
+                  },
+                  "eff100": {
+                    "type": "integer"
+                  },
+                  "season": {
+                    "type": "integer"
+                  },
+                  "nfOnly": {
+                    "type": "integer"
+                  },
+                  "sortBy3bvs": {
+                    "type": "integer"
+                  },
+                  "mobile": {
+                    "type": "integer"
+                  }
+                }
+              },
+              "2": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "integer"
+                  },
+                  "gameId": {
+                    "type": "integer"
+                  },
+                  "userId": {
+                    "type": "integer"
+                  },
+                  "finishedAt": {
+                    "type": "string"
+                  },
+                  "level": {
+                    "type": "integer"
+                  },
+                  "sizeX": {
+                    "type": "integer"
+                  },
+                  "sizeY": {
+                    "type": "integer"
+                  },
+                  "mines": {
+                    "type": "integer"
+                  },
+                  "duration": {
+                    "type": "integer"
+                  },
+                  "nf": {
+                    "type": "integer"
+                  },
+                  "bbbv": {
+                    "type": "integer"
+                  },
+                  "bbbvs": {
+                    "type": "integer"
+                  },
+                  "eff100": {
+                    "type": "integer"
+                  },
+                  "season": {
+                    "type": "integer"
+                  },
+                  "nfOnly": {
+                    "type": "integer"
+                  },
+                  "sortBy3bvs": {
+                    "type": "integer"
+                  },
+                  "mobile": {
+                    "type": "integer"
+                  }
+                }
+              },
+              "3": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "integer"
+                  },
+                  "gameId": {
+                    "type": "integer"
+                  },
+                  "userId": {
+                    "type": "integer"
+                  },
+                  "finishedAt": {
+                    "type": "string"
+                  },
+                  "level": {
+                    "type": "integer"
+                  },
+                  "sizeX": {
+                    "type": "integer"
+                  },
+                  "sizeY": {
+                    "type": "integer"
+                  },
+                  "mines": {
+                    "type": "integer"
+                  },
+                  "duration": {
+                    "type": "integer"
+                  },
+                  "nf": {
+                    "type": "integer"
+                  },
+                  "bbbv": {
+                    "type": "integer"
+                  },
+                  "bbbvs": {
+                    "type": "integer"
+                  },
+                  "eff100": {
+                    "type": "integer"
+                  },
+                  "season": {
+                    "type": "integer"
+                  },
+                  "nfOnly": {
+                    "type": "integer"
+                  },
+                  "sortBy3bvs": {
+                    "type": "integer"
+                  },
+                  "mobile": {
+                    "type": "integer"
+                  }
+                }
+              }
+            }
+          },
+          "noUserStatExp": {
+            "type": "integer"
+          },
+          "arenaResults": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "startedAt": {
+                  "type": "string"
+                },
+                "finishedAt": {
+                  "type": "string"
+                },
+                "userId": {
+                  "type": "integer"
+                },
+                "type": {
+                  "type": "integer"
+                },
+                "mode": {
+                  "type": "integer"
+                },
+                "extraConf": {
+                  "type": "null"
+                },
+                "state": {
+                  "type": "integer"
+                },
+                "duration": {
+                  "type": "integer"
+                },
+                "penaltyTotal": {
+                  "type": "integer"
+                },
+                "operationTicketId": {
+                  "type": "integer"
+                },
+                "operationRewardId": {
+                  "type": "integer"
+                }
+              }
+            }
+          },
+          "allTalentPoints": {
+            "type": "integer"
+          },
+          "customTalentData": {
+            "type": "object"
+          }
+        }
+      }
+    },
+    "GetUserInfoWS": {
+      "samples": 2,
+      "request": {
+        "type": "object",
+        "properties": {
+          "userId": {
+            "type": "integer"
+          }
+        }
+      },
+      "response": {
+        "type": "object",
+        "properties": {
+          "user": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "integer"
+              },
+              "username": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "country": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "SearchUserWS": {
+      "samples": 2,
+      "request": {
+        "type": "object",
+        "properties": {
+          "query": {
+            "type": "string"
+          },
+          "isFinal": {
+            "type": "boolean"
+          }
+        }
+      },
+      "response": {
+        "type": "object",
+        "properties": {
+          "result": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "username": {
+                  "type": "string"
+                },
+                "country": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "userId": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "isActive": {
+            "type": "boolean"
+          }
+        }
+      }
+    }
+  }
+}
