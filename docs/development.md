@@ -125,6 +125,15 @@ action is required. The tag must already exist remotely; the CLI uses
 Regular pushes and tag pushes alone do not publish a release. A repeated run
 for an existing release fails rather than replacing its assets.
 
+### Publish to Gitee
+
+The separate **Publish Gitee Release** workflow copies a selected published
+GitHub Release to [putianyi889/wom-api](https://gitee.com/putianyi889/wom-api).
+Configure the `GITEE_TOKEN` repository secret and ensure the target has the same
+version tag and commit. It verifies the three original assets by SHA256 and
+uploads them without rebuilding. See the [Gitee publishing guide](publishing-gitee.md)
+for setup, manual dispatch, local publishing, installation and failure handling.
+
 Users install a specific wheel URL or Git tag as shown in the
 [quick start](quickstart.md), using the
 [putianyi889/wom-api repository](https://github.com/putianyi889/wom-api).

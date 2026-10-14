@@ -70,3 +70,7 @@ python -m sphinx -W -b html docs docs/_build/html
 Open `docs/_build/html/index.html`. For tests, protocol updates, wheel/sdist
 builds and GitHub Releases, see the [development guide](docs/development.md).
 
+The [Gitee mirror](https://gitee.com/putianyi889/wom-api) supports Git tag
+installation. A separate manual workflow can copy a GitHub Release and its
+three verified assets to Gitee; see the [Gitee publishing guide](docs/publishing-gitee.md).
+

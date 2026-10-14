@@ -23,6 +23,15 @@ wom-api @ https://github.com/putianyi889/wom-api/releases/download/v0.1.0/wom_ap
 从配置的包源安装。建议固定版本 URL 或完整 commit hash，以便复现安装。
 在本地仓库内开发时，执行 `python -m pip install -e .`。
 
+Gitee 镜像仓库也支持固定 Git 标签安装：
+
+```sh
+python -m pip install "wom-api @ git+https://gitee.com/putianyi889/wom-api.git@v0.1.0"
+```
+
+Gitee Release 发布后，可从发行版页面复制 wheel 附件地址直接安装。
+配置、发布和验证步骤见 [Gitee 发布指南](publishing-gitee.md)。
+
 ```python
 import asyncio
 from wom_api import WomClient

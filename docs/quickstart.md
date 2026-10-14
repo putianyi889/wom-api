@@ -23,6 +23,15 @@ contains the package; its dependencies still use pip's configured package
 index. Use a versioned asset or a full Git commit hash for a reproducible
 dependency, rather than following a moving branch.
 
+The Gitee mirror also supports a fixed Git tag:
+
+```sh
+python -m pip install "wom-api @ git+https://gitee.com/putianyi889/wom-api.git@v0.1.0"
+```
+
+After publishing a Gitee Release, copy its wheel attachment download URL for
+direct installation. See the [Gitee publishing guide](publishing-gitee.md).
+
 For this checkout:
 
 ```sh

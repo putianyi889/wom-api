@@ -21,4 +21,6 @@ endpoints
 reference
 research/README
 development
+publishing-gitee
+research/gitee/README
 ```
