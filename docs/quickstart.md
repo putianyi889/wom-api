@@ -29,8 +29,10 @@ The Gitee mirror also supports a fixed Git tag:
 python -m pip install "wom-api @ git+https://gitee.com/putianyi889/wom-api.git@v0.1.0"
 ```
 
-After publishing a Gitee Release, copy its wheel attachment download URL for
-direct installation. See the [Gitee publishing guide](publishing-gitee.md).
+Gitee `v0.1.0` is published. Download its wheel and install the local file with
+`python -m pip install ./wom_api-0.1.0-py3-none-any.whl`. Direct pip access to
+the Gitee URL returned HTTP 403 in validation; local installation passed.
+See the [Gitee publishing guide](publishing-gitee.md).
 
 For this checkout:
 

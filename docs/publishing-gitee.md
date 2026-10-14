@@ -69,22 +69,33 @@ python tools/publish_gitee.py --repo putianyi889/wom-api --tag v0.1.0 --commit $
 
 ## 安装
 
-发布成功后，在 Gitee 发行版页面复制 wheel 附件的下载链接，再安装：
+`v0.1.0` 已发布到 [Gitee 发行版页面](https://gitee.com/putianyi889/wom-api/releases/tag/v0.1.0)。
+推荐从页面下载 wheel 后安装：
 
 ```sh
-python -m pip install "COPIED_WHEEL_DOWNLOAD_URL"
+python -m pip install ./wom_api-0.1.0-py3-none-any.whl
 ```
 
-`requirements.txt` 中同样使用 `wom-api @ COPIED_WHEEL_DOWNLOAD_URL`。
-Gitee 的附件下载链接由服务端生成，不能套用 GitHub 的 `/releases/download/...` 路径。
+2026-10-14 的验证中，三个附件均可匿名下载，SHA256 与 GitHub 原始附件完全一致；
+下载后的 wheel 可安装并导入 `wom_api`。但 pip 直接访问同一 Gitee wheel URL 返回
+HTTP 403，在沙箱外复核也相同。不要将直接 URL 安装作为已验证的默认方案。
+需要在 `requirements.txt` 中引用在线 wheel 时，目前可使用已验证的 GitHub URL。
+
+Gitee 的附件下载链接由服务端返回。本版本的地址为：
+
+```text
+https://gitee.com/putianyi889/wom-api/releases/download/v0.1.0/wom_api-0.1.0-py3-none-any.whl
+```
+
+其他版本请从发行版页面复制实际地址。
 也可以使用已经同步的 Git 标签（要求本机安装 Git）：
 
 ```sh
 python -m pip install "wom-api @ git+https://gitee.com/putianyi889/wom-api.git@v0.1.0"
 ```
 
-依赖仍从 pip 配置的包源安装。公开附件和 Git 克隆能否匿名访问，需要在目标仓库
-发布后验证；私有仓库或 Gitee 的访问限制可能要求登录。
+依赖仍从 pip 配置的包源安装。Git 标签安装命令给出了可用语法，本次没有执行
+Gitee Git 克隆安装；私有仓库或 Gitee 的访问限制可能要求登录。
 
 ## 失败处理和验证范围
 
@@ -97,5 +108,7 @@ Gitee 创建发行版与上传附件不是原子操作。上传失败可能留�
 删除这个未完成的发行版后重新运行，应保留版本标签并确认删除的是未完成的发布。
 
 自动测试使用本地 aiohttp HTTP 服务，覆盖三个附件的 multipart 上传、标签分页、
-提交一致性、文件校验、认证错误、失败停止和凭据不跟随重定向。真实 Gitee 上传与
-安装验证仍需要配置令牌后执行。方案比较和 API 依据见[调查报告](research/gitee/README.md)。
+提交一致性、文件校验、认证错误、失败停止和凭据不跟随重定向。
+`v0.1.0` 的真实上传已通过 [发布工作流](https://github.com/putianyi889/wom-api/actions/runs/38521685750)
+完成，三个公开附件的下载与校验、下载后 wheel 的安装与导入均已通过；直接 URL
+安装的限制见上文。方案比较和 API 依据见[调查报告](research/gitee/README.md)。

@@ -29,7 +29,9 @@ Gitee 镜像仓库也支持固定 Git 标签安装：
 python -m pip install "wom-api @ git+https://gitee.com/putianyi889/wom-api.git@v0.1.0"
 ```
 
-Gitee Release 发布后，可从发行版页面复制 wheel 附件地址直接安装。
+Gitee 的 `v0.1.0` 已发布，可从发行版页面下载 wheel，再执行
+`python -m pip install ./wom_api-0.1.0-py3-none-any.whl`。
+本次 pip 直接访问 Gitee wheel 地址返回 HTTP 403，下载后本地安装已验证通过。
 配置、发布和验证步骤见 [Gitee 发布指南](publishing-gitee.md)。
 
 ```python

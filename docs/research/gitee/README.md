@@ -56,8 +56,17 @@ The imported `v0.1.0` matched GitHub commit
 ## Validation limits
 
 Local HTTP tests exercise real form encoding, all three uploads and failure
-handling. Anonymous Gitee tag access succeeded for this repository. Authenticated
-release creation, upload quotas, attachment download restrictions and pip
-installation require live validation with the configured target token. No quota
-or universal anonymous-download guarantee is inferred from these API schemas.
+handling. Anonymous Gitee tag access succeeded for this repository. The
+[live workflow](https://github.com/putianyi889/wom-api/actions/runs/38521685750)
+created release ID `1204673` and uploaded all three `v0.1.0` assets. Anonymous
+downloads with curl succeeded and all SHA256 digests matched GitHub. Installing
+the downloaded wheel into a separate target directory with existing runtime
+dependencies, then importing `wom_api` from that directory, confirmed `0.1.0`.
+
+Direct pip installation from the Gitee wheel URL returned HTTP 403 both inside
+and outside the sandbox, even though curl downloaded the same URL successfully.
+The cause of that client-dependent response is unconfirmed. The documented
+default is downloading the wheel first and installing the local file. Gitee
+Git clone installation was not exercised. No quota or universal anonymous
+download guarantee is inferred from these API schemas.
 See the [publishing guide](../../publishing-gitee.md) for operational steps.
